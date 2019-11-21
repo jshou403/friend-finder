@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Friend Finder: Twin Peaks Edition</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!--Let browser know website is optimized for mobile-->
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+
+    <!-- Reset.CSS -->
+    <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
+
+    <!-- Own CSS -->
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-12 jumbotron alert-danger">
+                <!-- <h1 class="display-3">Friend Finder</h1> -->
+                <h1 class="display-4">Survey Questions</h2>
+                    <hr class="my-4">
+
+                    <form>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput">Your Name (Required)</label>
+                            <input type="text" class="form-control" id="name" placeholder="Example input" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="formGroupExampleInput2">Link to Your Photo (Required)</label>
+                            <input type="text" class="form-control" id="imageurl" placeholder="Another input" required>
+                        </div>
+
+
+                        <div>
+                            <!-- 1 -->
+                            <div class="form-group">
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        1 - I enjoy the great outdoors.
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-4">
+                                        <select name="question1" class="custom-select my-1 mr-sm-2" id="q1">
+                                            <option value="1">1 (Strongly Disagree)</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5 (Strongly Agree)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- 2 -->
+                        <div class="form-group">
+                            <div>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        2 - I am a hopeless romantic.
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-4">
+                                        <select name="question2" class="custom-select my-1 mr-sm-2" id="q2">
+                                            <option value="1">1 (Strongly Disagree)</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5 (Strongly Agree)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- 4 -->
+                        <div class="form-group">
+                            <div>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        3 - In my spare time, I watch TV.
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-4">
+                                        <select name="question3" class="custom-select my-1 mr-sm-2" id="q3">
+                                            <option value="1">1 (Strongly Disagree)</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5 (Strongly Agree)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- 5 -->
+                        <div class="form-group">
+                            <div>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        4 - Long drives help me think.
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-4">
+                                        <select name="question4" class="custom-select my-1 mr-sm-2" id="q4">
+                                            <option value="1">1 (Strongly Disagree)</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5 (Strongly Agree)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- 6 -->
+                        <div class="form-group">
+                            <div>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        5 - When it comes to money, I mean business!
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-4">
+                                        <select name="question5" class="custom-select my-1 mr-sm-2" id="q5">
+                                            <option value="1">1 (Strongly Disagree)</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5 (Strongly Agree)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- 6 -->
+                        <div class="form-group">
+                            <div>
+
+                                <div class="row">
+                                    <div class="col-12">
+                                        6 - Being a good person is important to me.
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-sm-12 col-md-4">
+                                        <select name="question6" class="custom-select my-1 mr-sm-2" id="q6">
+                                            <option value="1">1 (Strongly Disagree)</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5 (Strongly Agree)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <!-- 7 -->
+                        <div class="form-group">
+                                <div>
+    
+                                    <div class="row">
+                                        <div class="col-12">
+                                            7 - Being a good person is important to me.
+                                        </div>
+                                    </div>
+    
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-4">
+                                            <select name="question7" class="custom-select my-1 mr-sm-2" id="q7">
+                                                <option value="1">1 (Strongly Disagree)</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5 (Strongly Agree)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+
+                        <!-- 8 -->
+                        <div class="form-group">
+                                <div>
+    
+                                    <div class="row">
+                                        <div class="col-12">
+                                            8 - Being a good person is important to me.
+                                        </div>
+                                    </div>
+    
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-4">
+                                            <select name="question8" class="custom-select my-1 mr-sm-2" id="q8">
+                                                <option value="1">1 (Strongly Disagree)</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5 (Strongly Agree)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+
+                        <!-- 9 -->
+                        <div class="form-group">
+                                <div>
+    
+                                    <div class="row">
+                                        <div class="col-12">
+                                            9 - Being a good person is important to me.
+                                        </div>
+                                    </div>
+    
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-4">
+                                            <select name="question9" class="custom-select my-1 mr-sm-2" id="q9">
+                                                <option value="1">1 (Strongly Disagree)</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5 (Strongly Agree)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+
+                        <!-- 10 -->
+                        <div class="form-group">
+                                <div>
+    
+                                    <div class="row">
+                                        <div class="col-12">
+                                            10 - Being a good person is important to me.
+                                        </div>
+                                    </div>
+    
+                                    <div class="row">
+                                        <div class="col-sm-12 col-md-4">
+                                            <select name="question10" class="custom-select my-1 mr-sm-2" id="q10">
+                                                <option value="1">1 (Strongly Disagree)</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5 (Strongly Agree)</option>
+                                            </select>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+
+                        <!-- <button class="btn btn-dark btn-lg" id="submit-btn" type="submit" href="#">Go!</button> -->
+                        <a class="btn btn-dark btn-lg" id="submit-btn" role="button" href="#">Submit</a>
+
+                    </form>
+
+            </div>
+
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <a href="../api/friends-list" class="text-dark">API Friends List</a> | <a
+                    href="http://www.github.com/jshou403" class="text-dark">GitHub Repo</a>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- jQuery link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+
+        $("#submit-btn").on("click", function () {
+            console.log("submit-btn clicked");
+        });
+
+    </script>
+
+</body>
+
+</html>
