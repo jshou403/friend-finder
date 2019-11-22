@@ -293,28 +293,30 @@
 
                         </div>
 
-                        <!-- <button class="btn btn-dark btn-lg" id="submit-btn" type="submit" href="#">Go!</button> -->
-                        <a class="btn btn-dark btn-lg" id="submit-btn" role="button" href="#" data-toggle="modal" data-target="#exampleModal">Submit</a>
+                        <a class="btn btn-dark btn-lg" id="submit-btn" role="button" href="#" data-toggle="modal"
+                            data-target="#friendmatch">Submit</a>
 
                     </form>
 
                     <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
-                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal fade" id="friendmatch" tabindex="-1" role="dialog" aria-labelledby="friendmatch"
+                        aria-hidden="true">
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
+
                                 <div class="modal-header">
-                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <h5 class="modal-title">You've been matched to</h5>
                                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                         <span aria-hidden="true">&times;</span>
                                     </button>
                                 </div>
-                                <div class="modal-body">
-                                    ...
+
+                                <div class="modal-body" id="friendmatchdisplay">
                                 </div>
+
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                    <button type="button" class="btn btn-dark" data-dismiss="modal"
+                                        id="close-btn">Close</button>
                                 </div>
                             </div>
                         </div>
@@ -340,7 +342,7 @@
 
         $("#submit-btn").on("click", function () {
             event.preventDefault();
-            console.log("submit-btn clicked");
+            // console.log("submit-btn clicked");
 
             var surveyAnswers = [];
 
@@ -369,18 +371,25 @@
 
             $.post("api/friends", newFriend)
                 .then(function (data) {
-                    console.log("survey.html", data);
-                    console.log("Adding new friend... ");
+                    // console.log("data = ");
+                    // console.log(data);
+                    // console.log("Adding new friend... ");
 
-                    
-            });
+                    var friendMatch = data;
 
-            // app.post("/api/friends", newFriend, function (data) {
-            //     console.log(data);
-            //     return res.json(friends);
-            // });
+                    // console.log("friendmatch = " + friendMatch);
+                    // console.log("friendmatch.name = " + friendMatch.name);
 
+                    $("#friendmatchdisplay").empty();
 
+                    // $("#friendmatchdisplay").append("<div><h4>" + friendMatch.name + "</h2></div>");
+                    $("#friendmatchdisplay").append("<div><h4>" + friendMatch.name + "</h2></div><div><img src=\"" + friendMatch.url + "\" class=\"result-image\"></div>");
+
+                    $("#name").val("");
+                    $("#imageurl").val("");
+                    $(".custom-select").val(1);
+
+                });
 
         });
 

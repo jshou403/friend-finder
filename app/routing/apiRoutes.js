@@ -27,8 +27,8 @@ module.exports = function (app) {
 
             var diff = 0;
 
-            console.log("\nfriend #" + i + "\nfriend.AnswersArr = " + friends[i].answersArr);
-            console.log("newFriend" + newFriend.answersArr);
+            // console.log("\nfriend #" + i + "\nfriend.AnswersArr = " + friends[i].answersArr);
+            // console.log("newFriend.Arr = " + newFriend.answersArr);
 
             // then loop through each index of the newFriend.answersArr
             for (var j = 0; j < newFriend.answersArr.length; j++) {
@@ -48,41 +48,15 @@ module.exports = function (app) {
 
         }
 
-        console.log("friends[closestMatch] = " + i);
-        console.log(friends[closestMatch]);
-        console.log("closestScore = "  + closestScore);
+        // console.log("friends[closestMatch] = " + i);
+        // console.log(friends[closestMatch]);
+        // console.log("closestScore = "  + closestScore);
 
-        // IS THIS REQUIRED?
-        // res.json(newFriend);
+        // gives response of the closest match back to front ent post route
+        res.json(friends[closestMatch]);
 
         // pushes to friendsArr
         friends.push(newFriend);
-
-        // POST BEST FRIEND TO MODAL
-
-        // console.log(newFriend);
-
-        // res.json(newFriend);
-
-        // req.body hosts is equal to the JSON post sent from the user
-        // This works because of our body parsing middleware
-        // var newReservation = req.body;
-
-        // Using a RegEx Pattern to remove spaces from newReservation
-        // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-        // newReservation.routeName = newReservation.name
-        //   .replace(/\s+/g, "")
-        //   .toLowerCase();
-
-        // console.log(newReservation);
-
-        // res.json(newReservation);
-
-        // if (reservations.length < 5) {
-        //   reservations.push(newReservation);
-        // } else {
-        //   waitlist.push(newReservation);
-        // }
 
     });
 
