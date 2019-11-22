@@ -294,9 +294,31 @@
                         </div>
 
                         <!-- <button class="btn btn-dark btn-lg" id="submit-btn" type="submit" href="#">Go!</button> -->
-                        <a class="btn btn-dark btn-lg" id="submit-btn" role="button" href="#">Submit</a>
+                        <a class="btn btn-dark btn-lg" id="submit-btn" role="button" href="#" data-toggle="modal" data-target="#exampleModal">Submit</a>
 
                     </form>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    ...
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                    <button type="button" class="btn btn-primary">Save changes</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
             </div>
 
@@ -321,39 +343,44 @@
             console.log("submit-btn clicked");
 
             var surveyAnswers = [];
-            surveyAnswers.push(parseFloat($("option[name=q1answer]:selected").val()));
-            surveyAnswers.push(parseFloat($("option[name=q2answer]:selected").val()));
-            surveyAnswers.push(parseFloat($("option[name=q3answer]:selected").val()));
-            surveyAnswers.push(parseFloat($("option[name=q4answer]:selected").val()));
-            surveyAnswers.push(parseFloat($("option[name=q5answer]:selected").val()));
-            surveyAnswers.push(parseFloat($("option[name=q6answer]:selected").val()));
-            surveyAnswers.push(parseFloat($("option[name=q7answer]:selected").val()));
-            surveyAnswers.push(parseFloat($("option[name=q8answer]:selected").val()));
-            surveyAnswers.push(parseFloat($("option[name=q9answer]:selected").val()));
-            surveyAnswers.push(parseFloat($("option[name=q10answer]:selected").val()));
+
+            surveyAnswers.push(parseInt($("option[name=q1answer]:selected").val()));
+            surveyAnswers.push(parseInt($("option[name=q2answer]:selected").val()));
+            surveyAnswers.push(parseInt($("option[name=q3answer]:selected").val()));
+            surveyAnswers.push(parseInt($("option[name=q4answer]:selected").val()));
+            surveyAnswers.push(parseInt($("option[name=q5answer]:selected").val()));
+            surveyAnswers.push(parseInt($("option[name=q6answer]:selected").val()));
+            surveyAnswers.push(parseInt($("option[name=q7answer]:selected").val()));
+            surveyAnswers.push(parseInt($("option[name=q8answer]:selected").val()));
+            surveyAnswers.push(parseInt($("option[name=q9answer]:selected").val()));
+            surveyAnswers.push(parseInt($("option[name=q10answer]:selected").val()));
 
             var newFriend = {
                 name: $("#name").val().trim(),
                 URL: $("#imageurl").val().trim(),
-                responseArr: surveyAnswers
+                answersArr: surveyAnswers
             };
 
-            // console.log(newFriend);
+            console.log(newFriend);
             // console.log("\n");
             console.log("newFriend.name = " + newFriend.name);
             console.log("newFriend.URL = " + newFriend.URL);
-            console.log("newFriend.answersArr = " + newFriend.responseArr);
+            console.log("newFriend.answersArr = " + newFriend.answersArr);
 
             $.post("api/friends", newFriend)
-            .then (function(data){
-                console.log("survey.html", data);
-                console.log("Adding new friend... ");
+                .then(function (data) {
+                    console.log("survey.html", data);
+                    console.log("Adding new friend... ");
+
+                    
             });
 
             // app.post("/api/friends", newFriend, function (data) {
             //     console.log(data);
             //     return res.json(friends);
             // });
+
+
 
         });
 
