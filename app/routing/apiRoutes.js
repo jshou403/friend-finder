@@ -1,12 +1,24 @@
 var path = require("path");
+var friends = require("../data/friends.js");
 
 module.exports = function (app) {
 
+    // displays friends.js file in json format
     app.get("/api/friends", function (req, res) {
+        console.log(res);
         return res.json(friends);
     });
 
     app.post("/api/friends", function (req, res) {
+
+        var newFriend = req.body;
+        console.log(newFriend);
+        res.json(newFriend);
+        friends.push(newFriend);
+
+        // console.log(newFriend);
+
+        // res.json(newFriend);
 
         // req.body hosts is equal to the JSON post sent from the user
         // This works because of our body parsing middleware
@@ -27,6 +39,7 @@ module.exports = function (app) {
         // } else {
         //   waitlist.push(newReservation);
         // }
+
     });
 
 }
