@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Friend Finder</title>
+    <title>Friend Finder App</title>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -21,12 +21,6 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 
-    <!--Let browser know website is optimized for mobile-->
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
-
-    <!-- Reset.CSS -->
-    <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
-
     <!-- Own CSS -->
     <!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
 
@@ -36,6 +30,7 @@
 
     <div class="container">
 
+        <!-- Survey -->
         <div class="row">
 
             <div class="col-12 jumbotron alert-danger">
@@ -326,6 +321,7 @@
 
         </div>
 
+        <!-- Footer Links -->
         <div class="row">
             <div class="col-12">
                 <a href="../api/friends" class="text-dark">API Friends List</a> | <a
@@ -363,26 +359,28 @@
                 answersArr: surveyAnswers
             };
 
-            console.log(newFriend);
+            // console.log(newFriend);
             // console.log("\n");
-            console.log("newFriend.name = " + newFriend.name);
-            console.log("newFriend.URL = " + newFriend.URL);
-            console.log("newFriend.answersArr = " + newFriend.answersArr);
+            // console.log("newFriend.name = " + newFriend.name);
+            // console.log("newFriend.URL = " + newFriend.URL);
+            // console.log("newFriend.answersArr = " + newFriend.answersArr);
 
+            // posts the newFriend to the front end from to the back end
+            // (at the back end the newFriend is compared to
+            // the API and 
+            // call back function returns data from the same post route
             $.post("api/friends", newFriend)
                 .then(function (data) {
                     // console.log("data = ");
                     // console.log(data);
-                    // console.log("Adding new friend... ");
+                    // console.log("Adding newFriend... ");
 
                     var friendMatch = data;
-
                     // console.log("friendmatch = " + friendMatch);
                     // console.log("friendmatch.name = " + friendMatch.name);
 
                     $("#friendmatchdisplay").empty();
 
-                    // $("#friendmatchdisplay").append("<div><h4>" + friendMatch.name + "</h2></div>");
                     $("#friendmatchdisplay").append("<div><h4>" + friendMatch.name + "</h2></div><div class=\"text-center\"><img src=\"" + friendMatch.URL + "\" class=\"img-fluid\"></div>");
 
                     $("#name").val("");

@@ -3,7 +3,7 @@ var friends = require("../data/friends.js");
 
 module.exports = function (app) {
 
-    // displays friends.js file in json format
+    // gets the info from this route and displays it JSON format
     app.get("/api/friends", function (req, res) {
 
         // console.log(res);
@@ -12,7 +12,7 @@ module.exports = function (app) {
 
     app.post("/api/friends", function (req, res) {
 
-        // stores request from the get route into var
+        // stores request from the front end post route into same var
         var newFriend = req.body;
         // logs var to terminal 
         // console.log(newFriend);
@@ -33,7 +33,7 @@ module.exports = function (app) {
             // then loop through each index of the newFriend.answersArr
             for (var j = 0; j < newFriend.answersArr.length; j++) {
 
-                // take the absolute value of the difference of each index from friend[i] and newFriend
+                // take the absolute value of the difference of each index[j] from friend[i] and newFriend
                 diff += Math.abs(newFriend.answersArr[j] - friends[i].answersArr[j]);
 
                 // console.log("\nnewFriend.answersArr[j] - " + newFriend.answersArr[j]);
@@ -52,7 +52,7 @@ module.exports = function (app) {
         // console.log(friends[closestMatch]);
         // console.log("closestScore = "  + closestScore);
 
-        // gives response of the closest match back to front ent post route
+        // gives response of the closest match back to front end post route
         res.json(friends[closestMatch]);
 
         // pushes to friendsArr
