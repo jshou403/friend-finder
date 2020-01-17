@@ -1,4 +1,4 @@
-# Friend-Finder
+# friend-finder
 
 #### Take the Friend Finder survey and find out who from our database would be your best friend match. Once you get your friend match you are also added to the list of possible matches!
 * [Deployed](https://pure-shelf-59631.herokuapp.com/)
@@ -15,6 +15,6 @@ This full stack application takes user input from the front end and posts it to 
 
 ## Developer
 Jacalyn Shou 
-* [Github](https://jshou403.github.io/)
-* [LinkedIn](https://www.linkedin.com/in/jacalyn-shou/)
 * [Portfolio](http://www.jacalynshou.com/)
+* [Github](https://github.com/jshou403)
+* [LinkedIn](https://www.linkedin.com/in/jacalyn-shou/)
